@@ -3,5 +3,5 @@ from .views import drawstepsViewSet
 from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
-    path('drawing/',drawstepsViewSet.as_view()),
+    path('items/<str:name>/', drawstepsViewSet.as_view(), name='item-by-name'),
 ]
