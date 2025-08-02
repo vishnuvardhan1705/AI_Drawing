@@ -1,10 +1,7 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 from .views import drawstepsViewSet
-
-router = DefaultRouter()
-router.register(r'drawing', drawstepsViewSet, basename='drawpage')
+from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('drawing/',drawstepsViewSet.as_view()),
 ]
