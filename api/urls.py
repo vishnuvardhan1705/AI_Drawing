@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import drawstepsViewSet
-from rest_framework.routers import DefaultRouter
+from .views import DrawingDetailView, DrawingListView, home
 
 urlpatterns = [
-    path('items/<str:name>/', drawstepsViewSet.as_view(), name='item-by-name'),
+    path("", home, name="home"),
+    path("drawings/", DrawingListView.as_view(), name="drawing-list"),
+    path("drawings/<int:pk>/", DrawingDetailView.as_view(), name="drawing-detail"),
 ]

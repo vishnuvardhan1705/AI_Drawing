@@ -10,4 +10,4 @@ class drawpageSerializer(serializers.ModelSerializer):
     stepdiscription=drawstepsSerializer(many=True)
     class Meta:
         model=drawpage
-        fields=['id','name','description','stepdiscription']
+        fields=['id','name','description','category','stepdiscription']
