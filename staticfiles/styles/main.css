@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.background{
+    background-image: url("https://img.freepik.com/premium-photo/back-school-flat-lay-background-about-education_71268-1234.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mainhdr{
+    text-align: center;
+    font-family: 'Baloo 2' ,cursive;
+    font-size: 40px;
+    color: indigo;
+    font-weight: bold;
+}
+.tool{
+    margin-right: 3px;
+    height: 60px;
+    width: 60px;
+    border-radius: 65px;
+    background-color: transparent;
+}
+.caption{
+    margin-top: 2px;
+    text-align: center;
+    font-family: 'Baloo 2' ,cursive;
+    font-size: 20px;
+    color: indigo;
+    font-weight: bold;
+}
+.detailsection{
+    background-color: aliceblue;
+    width: 75vw;
+    padding: 3px;
+    margin-left: 50px;
+    border-radius: 24px;
+}
+.detailpara{
+    margin-left: 4px;
+    margin-right: 4px;
+    color: darkgreen;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.targt{
+    height: 28px;
+    width: 28px;
+    margin-top: 3px;
+}
+.list{
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: 'Roboto';
+    list-style-type: disc;
+}
+.lst{
+    font-weight: bold;
+}
+.selectionsection{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20241016/pngtree-white-paper-texture-background-a-blank-white-crumpled-and-creased-canvas-image_16399009.jpg");
+    background-size: cover;
+    padding: 3px;
+    width: 80vw;
+    margin-left: 30px;
+    border-radius: 24px;
+}
+.slct{
+    width: 40vw;
+}
+.hedr{
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: brown;
+    font-weight: bold;
+}
+.strtbtn{
+    border-radius: 10px;
+    width: 70vw;
+    height: 40px;
+    border-width: 1px;
+    background-color: rgb(225, 34, 142);
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:whitesmoke;
+}

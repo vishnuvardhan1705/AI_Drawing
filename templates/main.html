@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <title>AI-Drawing</title>
+</head>
+<body>
+    <div class="background pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="{% static 'images/painttool.jpg'%}" class="tool "/>
+                        <h1 class="mainhdr">BeyondKlasses Drawing Tutor</h1>
+                    </div>
+                    <div class="col-12">
+                        <p class="caption">Your colorful journey to creativity starts here</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="detail-section mt-3">
+            <div class="container">
+                <div class="row detailsection">
+                    <div class="col-12 text-center">
+                        <div class="d-flex flex-row justify-content-center mt-4">
+                        <img src="{% static 'images/targt.jpg'%}" class="targt"/>
+                        <p class="detailpara">Smart Drawing Assistant for kids</p>
+                        <img src="{% static 'images/targt.jpg'%}" class="targt"/>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="list">Learn to draw <span class="lst">step by step </span>with easy instructions designed specially for kids.</li>
+                            <li class="list">Every child learns at their <span class="lst"> own pace</span> without pressure.</li>
+                            <li class="list">Upload your art and get instant <span class="lst"> feedback and scoring.</span></li>
+                            <li class="list">Parents can <span class="lst"> track progress and scores </span> anytime.</li>
+                            <li class="list">Weekly <span class="lst">leaderboards and fun contests </span> to make learning exciting.</li>
+                            <li class="list">Collect <span class="lst">stars, badges, and certificates </span> based on scores.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="selection-section mt-3">
+            <div class="container ">
+                <div class="row selectionsection p-3">
+                    <div class="col-12 text-center mt-3">
+                        <h1 class="hedr">Pick Your Art Journey</h1>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class=" d-flex flex-column justify-content-start">
+                            <label  for="categorySelect">Select Your Category :</label>
+                            <select class="slct" id="categorySelect">
+                                <option value="">Select-All</option>
+                                <option value="Animals">Animals</option>
+                                <option value="Fruits-Vegetables">Fruits-Vegetables</option>
+                                <option value="Vehicles">Vehicles</option>
+                                <option value="Objects">Objects</option>
+                            </select>
+                            <label class="mt-3" for="drawing">Select Yours Drawing : </label>
+                            <select class="slct" id="drawing">
+                                <option value="">Choose Here</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5 text-center">
+                        <button class="strtbtn">Start Drawing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <div class=" drawingstepssection"></div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    {{ drawings|json_script:"drawings-data" }}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
