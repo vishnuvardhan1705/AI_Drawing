@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-mbkt$x8v#+8jml^fh-%%7on7q=a&r)1n&u!x+67+jht3r-_m1i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'requirements.txt'
 ]
 
 MIDDLEWARE = [
