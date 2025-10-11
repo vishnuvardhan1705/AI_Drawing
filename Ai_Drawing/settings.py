@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -76,13 +77,7 @@ WSGI_APPLICATION = 'Ai_Drawing.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'AI_Drawing',
-        'USER':'postgres',
-        'PASSWORD':'abc123',
-        'HOST':'localhost'
-    }
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
@@ -122,16 +117,16 @@ USE_TZ = True
 
 
 
-STATIC_URL = "static/"
-STATICFILES_DIRS = [
-     BASE_DIR / "static"
-]
+# Static files
+STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Use WhiteNoise to serve static files in production
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
-MEDIA_URL = '/media/' 
-MEDIA_ROOT = BASE_DIR/'media'
+# Media files
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
 
