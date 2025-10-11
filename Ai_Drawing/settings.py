@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'AI_Drawing.urls'
+ROOT_URLCONF = 'Ai_Drawing.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'AI_Drawing.wsgi.application'
+WSGI_APPLICATION = 'Ai_Drawing.wsgi.application'
 
 
 # Database
