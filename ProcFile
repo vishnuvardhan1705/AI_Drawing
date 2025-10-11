@@ -1,0 +1,2 @@
+web: cd AI_Drawing && gunicorn AI_Drawing.wsgi:application
+
