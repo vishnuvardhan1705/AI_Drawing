@@ -77,9 +77,10 @@ WSGI_APPLICATION = 'Ai_Drawing.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(
+        os.environ.get('DATABASE_URL', 'postgres://postgres:abc123@localhost:5432/AI_Drawing')
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
