@@ -60,7 +60,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default='postgres://postgres:abc123@localhost:5432/AI_Drawing',
         conn_max_age=600,
-        ssl_require=False  # Render provides SSL automatically
+        ssl_require=True  # Render provides SSL automatically
     )
 }
 
