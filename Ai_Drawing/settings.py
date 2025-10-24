@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 import dj_database_url
+import socket
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -55,14 +56,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Ai_Drawing.wsgi.application'
 
-# Database setup
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://postgres:abc123@localhost:5432/AI_Drawing',
-        conn_max_age=600,
-        ssl_require=True  # Render provides SSL automatically
-    )
-}
+IS_LOCAL = DEBUG
+
+
+if IS_LOCAL:
+    # Local development (no SSL)
+    DATABASES = {
+        'default': dj_database_url.config(
+            default='postgres://postgres:abc123@localhost:5432/AI_Drawing',
+            conn_max_age=600,
+            ssl_require=False
+        )
+    }
+else:
+    # Render or other cloud deployment (SSL enabled)
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get("DATABASE_URL"),
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
