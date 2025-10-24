@@ -1,7 +1,7 @@
 from django.db import models
 
 class drawpage(models.Model):
-    name=models.CharField(max_length=100)
+    name=models.CharField(max_length=500)
     description=models.TextField()
     category=models.CharField(max_length=100,null=True)
 

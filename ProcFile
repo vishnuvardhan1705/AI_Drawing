@@ -1,3 +1,4 @@
-web: gunicorn Ai_Drawing.wsgi:application
+web: gunicorn Ai_Drawing.wsgi
+
 
 
